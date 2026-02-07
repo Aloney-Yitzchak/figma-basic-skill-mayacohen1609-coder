@@ -1,7 +1,7 @@
 name: Autograding Tests
 on:
   push:
-    branches:  main, master
+    branches: [main, master]
   workflow_dispatch:
 
 jobs:
@@ -29,3 +29,5 @@ jobs:
 
       - name: Autograding Reporter
         uses: classroom-resources/autograding-grading-reporter@v1
+        with:
+          runners: 'Required Files Check,Content Completeness'
